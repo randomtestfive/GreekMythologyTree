@@ -16,20 +16,34 @@
 
 <script type="text/javascript">
     // create an array with nodes
+	var titan = 'lime';
+	var god = 'cyan';
     var nodes = new vis.DataSet([
-        {id: 1, label: 'Node 1'},
-        {id: 2, label: 'Node 2'},
-        {id: 3, label: 'Node 3'},
-        {id: 4, label: 'Node 4'},
-        {id: 5, label: 'Node 5'}
+        {id: 1, label: 'Zeus', color:god},
+        {id: 2, label: 'Cronus', color:titan},
+        {id: 3, label: 'Rhea', color:titan},
+		{id: 4, label: 'Hera', color:god},
+		{id: 5, label: 'Angelos', color:god},
+		{id: 6, label: 'Aphrodite', color:god},
+		{id: 7, label: 'Leto', color:god},
+		{id: 8, label: 'Apollo', color:god}
     ]);
 
     // create an array with edges
     var edges = new vis.DataSet([
-        {from: 1, to: 3},
-        {from: 1, to: 2},
-        {from: 2, to: 4},
-        {from: 2, to: 5}
+		{from: 2, to: 3, dashes:true},
+        {from: 3, to: 1, arrows:'to'},
+		{from: 2, to: 1, arrows:'to'},
+		{from: 3, to: 4, arrows:'to'},
+		{from: 2, to: 4, arrows:'to'},
+		{from: 1, to: 4, dashes:true},
+		{from: 1, to: 5, arrows:'to'},
+		{from: 4, to: 5, arrows:'to'},
+		{from: 1, to: 6, arrows:'to'},
+		{from: 4, to: 6, arrows:'to'},
+		{from: 5, to: 6, dashes:true},
+		{from: 1, to: 8, arrows:'to'},
+		{from: 7, to: 8, arrows:'to'}
     ]);
 
     // create a network
