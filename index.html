@@ -5,8 +5,6 @@
 
     <style type="text/css">
         #mynetwork {
-            width: 600px;
-            height: 400px;
             border: 1px solid lightgray;
         }
     </style>
@@ -16,34 +14,159 @@
 
 <script type="text/javascript">
     // create an array with nodes
-	var titan = 'lime';
-	var god = 'cyan';
+    var titan = 'lime';
+    var god = 'yellow';
+    var primordial = 'cyan';
+    var mortal = 'red';
+    var divine = 'orange';
+    var nymph = 'blue';
     var nodes = new vis.DataSet([
-        {id: 1, label: 'Zeus', color:god},
-        {id: 2, label: 'Cronus', color:titan},
-        {id: 3, label: 'Rhea', color:titan},
-		{id: 4, label: 'Hera', color:god},
-		{id: 5, label: 'Angelos', color:god},
-		{id: 6, label: 'Aphrodite', color:god},
-		{id: 7, label: 'Leto', color:god},
-		{id: 8, label: 'Apollo', color:god}
+        {id:  1, label: 'Zeus', color:god},
+        {id:  2, label: 'Cronus', color:titan},
+        {id:  3, label: 'Rhea', color:titan},
+        {id:  4, label: 'Hera', color:god},
+        {id:  5, label: 'Angelos', color:god},
+        {id:  6, label: 'Aphrodite', color:god},
+        {id:  7, label: 'Leto', color:god},
+        {id:  8, label: 'Apollo', color:god},
+        {id:  9, label: 'Chaos', color:'black'},
+        {id: 10, label: 'Gaia', color:primordial},
+        {id: 11, label: 'Uranus', color:primordial},
+        {id: 12, label: 'Crius', color:titan},
+        {id: 13, label: 'Coeus', color:titan},
+        {id: 14, label: 'Hyperion', color:titan},
+        {id: 15, label: 'Iapetus', color:titan},
+        {id: 16, label: 'Mnemosyne', color:titan},
+        {id: 17, label: 'Oceanus', color:titan},
+        {id: 18, label: 'Phoebe', color:titan},
+        {id: 19, label: 'Tethys', color:titan},
+        {id: 20, label: 'Theia', color:titan},
+        {id: 21, label: 'Themis', color:titan},
+        {id: 22, label: 'Tyche', color:god},
+        {id: 23, label: 'Alcmene', color:mortal},
+        {id: 24, label: 'Heracles', color:divine},
+        {id: 25, label: 'Poseidon', color:god},
+        {id: 26, label: 'Hades', color:god},
+        {id: 27, label: 'Hestia', color:god},
+        {id: 28, label: 'Demeter', color:god},
+        {id: 29, label: 'Chiron', color:god},
+        {id: 30, label: 'Aeacus', color:divine},
+        {id: 31, label: 'Aegina', color:nymph},
+        {id: 32, label: 'Artemis', color:god},
+        {id: 33, label: 'Asia', color:titan},
+        {id: 34, label: 'Atlas', color:titan},
+        {id: 35, label: 'Pleione', color:nymph},
+        {id: 36, label: 'Maia', color:god},
+        {id: 37, label: 'Hermes', color:god},
+        {id: 38, label: 'Nyx', color:primordial},
+        {id: 39, label: 'Nemesis', color:god},
+        {id: 40, label: 'Helen of Troy', color:divine},
+        {id: 41, label: 'Manes', color:divine}
     ]);
 
     // create an array with edges
     var edges = new vis.DataSet([
-		{from: 2, to: 3, dashes:true},
-        {from: 3, to: 1, arrows:'to'},
-		{from: 2, to: 1, arrows:'to'},
-		{from: 3, to: 4, arrows:'to'},
-		{from: 2, to: 4, arrows:'to'},
-		{from: 1, to: 4, dashes:true},
-		{from: 1, to: 5, arrows:'to'},
-		{from: 4, to: 5, arrows:'to'},
-		{from: 1, to: 6, arrows:'to'},
-		{from: 4, to: 6, arrows:'to'},
-		{from: 5, to: 6, dashes:true},
-		{from: 1, to: 8, arrows:'to'},
-		{from: 7, to: 8, arrows:'to'}
+        {from:  5, to:  6, dashes:true},
+        {from:  1, to:  5, arrows:'to'},
+        {from:  4, to:  5, arrows:'to'},
+        {from:  4, to:  6, arrows:'to'},
+        {from:  1, to:  8, arrows:'to'},
+        {from:  7, to:  8, arrows:'to'},
+        {from:  9, to: 10, arrows:'to'},
+        {from:  1, to: 22, arrows:'to'},
+        {from:  6, to: 22, arrows:'to'},
+        {from:  1, to: 24, arrows:'to'},
+        {from: 23, to: 24, arrows:'to'},
+        {from:  1, to: 30, arrows:'to'},
+        {from: 31, to: 30, arrows:'to'},
+        {from:  1, to: 32, arrows:'to'},
+        {from:  7, to: 32, arrows:'to'},
+        {from: 13, to:  7, arrows:'to'},
+        {from: 18, to:  7, arrows:'to'},
+        {from: 17, to: 33, arrows:'to'},
+        {from: 19, to: 33, arrows:'to'},
+        {from: 33, to: 34, arrows:'to'},
+        {from: 15, to: 34, arrows:'to'},
+        {from: 17, to: 35, arrows:'to'},
+        {from: 34, to: 36, arrows:'to'},
+        {from: 35, to: 36, arrows:'to'},
+        {from:  1, to: 37, arrows:'to'},
+        {from: 36, to: 37, arrows:'to'},
+        {from:  1, to: 39, arrows:'to'},
+        {from: 38, to: 39, arrows:'to'},
+        {from:  9, to: 38, arrows:'to'},
+        {from:  1, to: 40, arrows:'to'},
+        {from: 39, to: 40, arrows:'to'},
+        {from:  1, to: 41, arrows:'to'},
+        {from: 10, to: 41, arrows:'to'},
+
+	//gaia children
+        {from:  1, to:  4, dashes:true},
+        {from:  4, to: 25, dashes:true},
+        {from: 25, to: 26, dashes:true},
+        {from: 26, to: 27, dashes:true},
+        {from: 27, to: 28, dashes:true},
+        {from: 28, to: 29, dashes:true},
+        {from: 29, to:  1, dashes:true},
+
+        {from:  3, to:  1, arrows:'to'},
+        {from:  2, to:  1, arrows:'to'},
+        {from:  3, to:  4, arrows:'to'},
+        {from:  2, to:  4, arrows:'to'},
+        {from:  3, to: 25, arrows:'to'},
+        {from:  2, to: 25, arrows:'to'},
+        {from:  3, to: 26, arrows:'to'},
+        {from:  2, to: 26, arrows:'to'},
+        {from:  3, to: 27, arrows:'to'},
+        {from:  2, to: 27, arrows:'to'},
+        {from:  3, to: 28, arrows:'to'},
+        {from:  2, to: 28, arrows:'to'},
+        {from:  3, to: 29, arrows:'to'},
+        {from:  2, to: 29, arrows:'to'},
+
+	//titans
+        {from: 10, to:  2, arrows:'to'},
+        {from: 11, to:  2, arrows:'to'},
+        {from: 10, to:  3, arrows:'to'},
+        {from: 11, to:  3, arrows:'to'},
+        {from: 10, to: 11, arrows:'to'},
+        {from: 11, to: 11, arrows:'to'},
+        {from: 11, to: 12, arrows:'to'},
+        {from: 10, to: 12, arrows:'to'},
+        {from: 11, to: 13, arrows:'to'},
+        {from: 10, to: 13, arrows:'to'},
+        {from: 11, to: 14, arrows:'to'},
+        {from: 10, to: 14, arrows:'to'},
+        {from: 11, to: 15, arrows:'to'},
+        {from: 10, to: 15, arrows:'to'},
+        {from: 11, to: 16, arrows:'to'},
+        {from: 10, to: 16, arrows:'to'},
+        {from: 11, to: 17, arrows:'to'},
+        {from: 10, to: 17, arrows:'to'},
+        {from: 11, to: 18, arrows:'to'},
+        {from: 10, to: 18, arrows:'to'},
+        {from: 11, to: 19, arrows:'to'},
+        {from: 10, to: 19, arrows:'to'},
+        {from: 11, to: 20, arrows:'to'},
+        {from: 10, to: 20, arrows:'to'},
+        {from: 11, to: 21, arrows:'to'},
+        {from: 10, to: 21, arrows:'to'},
+
+        {from:  2, to:  3, dashes:true},
+        {from:  3, to: 12, dashes:true},
+        {from: 12, to: 13, dashes:true},
+        {from: 13, to: 14, dashes:true},
+        {from: 14, to: 15, dashes:true},
+        {from: 15, to: 16, dashes:true},
+        {from: 16, to: 17, dashes:true},
+        {from: 17, to: 18, dashes:true},
+        {from: 18, to: 19, dashes:true},
+        {from: 19, to: 20, dashes:true},
+        {from: 20, to: 21, dashes:true},
+        {from: 21, to: 2, dashes:true},
+
+        //weird
+        {from: 11, to: 6, dashes:[10,3,3,3], arrows:'to'}
     ]);
 
     // create a network
@@ -54,7 +177,14 @@
         nodes: nodes,
         edges: edges
     };
-    var options = {};
+    var options = {
+        nodes: {
+            font: {
+                size: 14,
+                color: '#909090'
+            }
+        }
+    };
 
     // initialize your network!
     var network = new vis.Network(container, data, options);
