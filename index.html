@@ -20,6 +20,7 @@
     var mortal = 'red';
     var divine = 'orange';
     var nymph = 'blue';
+    var myth = 'purple';
     var nodes = new vis.DataSet([
         {id:  1, label: 'Zeus', color:god},
         {id:  2, label: 'Cronus', color:titan},
@@ -61,15 +62,25 @@
         {id: 38, label: 'Nyx', color:primordial},
         {id: 39, label: 'Nemesis', color:god},
         {id: 40, label: 'Helen of Troy', color:divine},
-        {id: 41, label: 'Manes', color:divine}
+        {id: 41, label: 'Manes', color:divine},
+        {id: 42, label: 'Pontus', color:primordial},
+        {id: 43, label: 'Nerus', color:primordial},
+        {id: 44, label: 'Doris', color:nymph},
+        {id: 45, label: 'Thetis', color:nymph},
+        {id: 46, label: 'Chiron', color:myth},
+        {id: 47, label: 'Chariclo', color:nymph},
+        {id: 48, label: 'Endeïs', color:divine},
+        {id: 49, label: 'Peleus', color:divine},
+        {id: 50, label: 'Achilles', color:divine},
+        {id: 51, label: 'Asopus', color:god},
+        {id: 52, label: 'Metope', color:nymph},
+        {id: 53, label: 'Ladon', color:god}
     ]);
 
     // create an array with edges
     var edges = new vis.DataSet([
-        {from:  5, to:  6, dashes:true},
         {from:  1, to:  5, arrows:'to'},
         {from:  4, to:  5, arrows:'to'},
-        {from:  4, to:  6, arrows:'to'},
         {from:  1, to:  8, arrows:'to'},
         {from:  7, to:  8, arrows:'to'},
         {from:  9, to: 10, arrows:'to'},
@@ -100,6 +111,23 @@
         {from:  1, to: 41, arrows:'to'},
         {from: 10, to: 41, arrows:'to'},
         {from: 19, to: 35, arrows:'to'},
+        {from: 19, to: 44, arrows:'to'},
+        {from: 17, to: 44, arrows:'to'},
+        {from: 43, to: 45, arrows:'to'},
+        {from: 44, to: 45, arrows:'to'},
+        {from: 46, to: 48, arrows:'to'},
+        {from: 47, to: 48, arrows:'to'},
+        {from: 48, to: 49, arrows:'to'},
+        {from: 30, to: 49, arrows:'to'},
+        {from: 49, to: 50, arrows:'to'},
+        {from: 45, to: 50, arrows:'to'},
+        {from: 19, to: 51, arrows:'to'},
+        {from: 17, to: 51, arrows:'to'},
+        {from: 51, to: 31, arrows:'to'},
+        {from: 52, to: 31, arrows:'to'},
+        {from: 19, to: 53, arrows:'to'},
+        {from: 17, to: 53, arrows:'to'},
+        {from: 53, to: 52, arrows:'to'},
 
 	//gaia children
         {from:  1, to:  4, dashes:true},
@@ -110,6 +138,11 @@
         {from: 28, to: 29, dashes:true},
         {from: 29, to:  1, dashes:true},
 
+        {from: 10, to: 42, arrows:'to'},
+        {from: 10, to: 43, arrows:'to'},
+        {from: 42, to: 43, arrows:'to'},
+
+        //olympians
         {from:  3, to:  1, arrows:'to'},
         {from:  2, to:  1, arrows:'to'},
         {from:  3, to:  4, arrows:'to'},
@@ -165,6 +198,11 @@
         {from: 19, to: 20, dashes:true},
         {from: 20, to: 21, dashes:true},
         {from: 21, to: 2, dashes:true},
+
+        //oceanids
+        {from: 35, to: 44, dashes:true},
+        {from: 44, to: 51, dashes:true},
+        {from: 51, to: 53, dashes:true},
 
         //weird
         {from: 11, to: 6, dashes:[10,3,3,3], arrows:'to'}
