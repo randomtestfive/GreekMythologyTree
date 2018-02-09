@@ -108,8 +108,13 @@
         {id: 81, label: 'Androgeneia', color:mortal},
         {id: 82, label: 'Euryale', color:mortal},
         {id: 83, label: 'Orion', color:hero},
-        {id: 84, label: 'Phobos', color:hero},
-        {id: 85, label: 'Deimos', color:hero}
+        {id: 84, label: 'Phobos', color:god},
+        {id: 85, label: 'Deimos', color:god},
+        {id: 86, label: 'Euryodeia', color:mortal},
+        {id: 87, label: 'Arcesius', color:mortal},
+        {id: 88, label: 'Chalcomedusa', color:mortal},
+        {id: 89, label: 'Laertes', color:mortal},
+        {id: 90, label: 'Eos', color:titan}
     ]);
 
     // create an array with edges
@@ -214,6 +219,12 @@
         {from: 55, to: 84, arrows:'to'},
         {from:  6, to: 85, arrows:'to'},
         {from: 55, to: 85, arrows:'to'},
+        {from:  1, to: 87, arrows:'to'},
+        {from: 86, to: 87, arrows:'to'},
+        {from: 87, to: 89, arrows:'to'},
+        {from: 88, to: 89, arrows:'to'},
+        {from: 14, to: 90, arrows:'to'},
+        {from: 20, to: 90, arrows:'to'},
 
         //gaia children
         {from:  1, to:  4, dashes:true},
