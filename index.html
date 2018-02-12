@@ -24,6 +24,8 @@
     var olympian = 'gold';
     var rivergod = 'lightblue';
     var hero = 'magenta';
+    var old = 'gainsboro';
+    var daemon = 'darkred';
     var nodes = new vis.DataSet([
         {id:  1, label: 'Zeus', color:olympian},
         {id:  2, label: 'Cronus', color:titan},
@@ -151,7 +153,23 @@
         {id:124, label: 'Sisyphus', color:mortal},
         {id:125, label: 'Erebus', color:primordial},
         {id:126, label: 'Aether', color:primordial},
-        {id:127, label: 'Hemera', color:primordial}
+        {id:127, label: 'Hemera', color:primordial},
+        {id:128, label: 'Minotaur', color:myth},
+        {id:129, label: 'Ariadne', color:god},
+        {id:130, label: 'Achlys', color:primordial},
+        {id:131, label: 'Thalassa', color:primordial},
+        {id:132, label: 'Chronos', color:old},
+        {id:133, label: 'Ananke', color:old},
+        {id:134, label: 'Hypnos', color:primordial},
+        {id:135, label: 'Thanatos', color:primordial},
+        {id:136, label: 'Selene', color:titan},
+        {id:137, label: 'Styx', color:nymph},
+        {id:138, label: 'Eurybia', color:titan},
+        {id:139, label: 'Pallas', color:titan},
+        {id:140, label: 'Zelus', color:daemon},
+        {id:141, label: 'Nike', color:daemon},
+        {id:142, label: 'Kratos', color:daemon},
+        {id:143, label: 'Bia', color:daemon}
     ]);
 
     // create an array with edges
@@ -313,6 +331,35 @@
         {from:125, to:126, arrows:'to'},
         {from: 38, to:127, arrows:'to'},
         {from:125, to:127, arrows:'to'},
+        {from: 69, to:128, arrows:'to'},
+        {from: 66, to:129, arrows:'to'},
+        {from: 69, to:129, arrows:'to'},
+        {from: 38, to:130, arrows:'to'},
+        {from:125, to:130, arrows:'to'},
+        {from:126, to:131, arrows:'to'},
+        {from:127, to:131, arrows:'to'},
+        {from:132, to:  9, arrows:'to'},
+        {from:133, to:  9, arrows:'to'},
+        {from: 38, to:134, arrows:'to'},
+        {from:125, to:134, arrows:'to'},
+        {from: 38, to:135, arrows:'to'},
+        {from:125, to:135, arrows:'to'},
+        {from: 14, to:136, arrows:'to'},
+        {from: 20, to:136, arrows:'to'},
+        {from: 19, to:137, arrows:'to'},
+        {from: 17, to:137, arrows:'to'},
+        {from: 10, to:138, arrows:'to'},
+        {from: 42, to:138, arrows:'to'},
+        {from: 12, to:139, arrows:'to'},
+        {from:138, to:139, arrows:'to'},
+        {from:137, to:140, arrows:'to'},
+        {from:139, to:140, arrows:'to'},
+        {from:137, to:141, arrows:'to'},
+        {from:139, to:141, arrows:'to'},
+        {from:137, to:142, arrows:'to'},
+        {from:139, to:142, arrows:'to'},
+        {from:137, to:143, arrows:'to'},
+        {from:139, to:143, arrows:'to'},
 
         //gaia children
         {from: 10, to: 42, arrows:'to'},
