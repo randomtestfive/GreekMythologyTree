@@ -189,7 +189,8 @@
         {id:160, label: 'Ampithea', color:mortal},
         {id:161, label: 'Deipyle', color:mortal},
         {id:162, label: 'Tydeus', color:mortal},
-        {id:163, label: 'Diomedes', color:hero}
+        {id:163, label: 'Diomedes', color:hero},
+        {id:164, label: 'Aristaeus', color:divine}
     ]);
 
     // create an array with edges
@@ -406,6 +407,8 @@
         {from:160, to:161, arrows:'to'},
         {from:161, to:163, arrows:'to'},
         {from:162, to:163, arrows:'to'},
+        {from:  8, to:164, arrows:'to'},
+        {from:150, to:164, arrows:'to'},
 
         //gaia children
         {from: 10, to: 42, arrows:'to'},
