@@ -5,21 +5,24 @@
     <link href="vis.min.css" rel="stylesheet" type="text/css" />
     <style type="text/css">
         body {
-            display: flex;
+            display: inline;
         }
         #mynetwork {
             border: 1px solid lightgray;
-            flex-grow: 1;
+            float: right;
+            width: 79.8%;
+            /* flex-grow: 1; */
             height: 99.5%;
         }
         #left {
-            width: 500px;
+            width: 20%;
             height: 100%;
             overflow-y: auto;
         }
     </style>
 </head>
 <body>
+<div id="mynetwork"></div>
 <div id="left">
     <h1>Greek Mythology Family "Tree"</h1>
     <a href="https://github.com/randomtestfive/GreekMythologyTree">Source Code</a>
@@ -107,7 +110,7 @@
 
     <p>Zeus is the father, grandfather, and second cousin of Hellen of Troy.</p>
 </div>
-<div id="mynetwork"></div>
+
 
 <script type="text/javascript">
     // create an array with nodes
