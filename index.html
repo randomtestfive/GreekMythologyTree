@@ -1,15 +1,111 @@
 <html>
 <head>
+    <title>Greek Mythology Family Tree</title>
     <script type="text/javascript" src="vis.min.js"></script>
     <link href="vis.min.css" rel="stylesheet" type="text/css" />
-
     <style type="text/css">
+        body {
+            display: flex;
+        }
         #mynetwork {
             border: 1px solid lightgray;
+            flex-grow: 1;
+            height: 99.5%;
+        }
+        #left {
+            width: 300px;
+            height: 100%;
+            overflow-y: auto;
         }
     </style>
 </head>
 <body>
+<div id="left">
+    <h1>Greek Mythology Family "Tree"</h1>
+    <h2>Connections</h2>
+    <p>
+        An arrow points from parent to child.
+        Most nodes will have two arrows pointing towards them,
+        indicating two parents.
+    </p>
+    <h2>Color Key</h2>
+    <h3><span style="background-color:yellow">God</span></h3>
+    <p>Just normal gods.</p>
+    <h3><span style="background-color:gold">Olympian</span></h3>
+    <p>These are the 12 Gods considered to be Olympians, such as Zeus</p>
+    <h3><span style="background-color:green">Titan</span></h3>
+    <p>The Titans were the pantheon before the Olympians, such as Cronus, Father of Zeus</p>
+    <h3><span style="background-color:cyan">Primordial</span></h3>
+    <p>
+        The Primordial gods existed before the Titans,
+        but aren't considered to be a pantheon.
+        Gaia is the mother of nist of the Titans.
+    </p>
+    <h3><span style="background-color:lightblue">River God</span></h3>
+    <p>
+        Most rivers had their own gods, which the rivers were named after.
+        Most of the River Gods were the male children of Oceanus and Tethys.
+    </p>
+    <h3><span style="background-color:blue">Water Nymph</span></h3>
+    <p>
+        Water Nymphs are the female children of either River Gods or certain Titans.
+        They inhabit non-river bodies of water.
+        Achilles' mother, Thetis, is a water nymph.
+    </p>
+    <h3><span style="background-color:magenta">Hero</span></h3>
+    <p>
+        Heroes are people who are traditionally referred to as Greek heroes.
+        This includes Hercules.
+    </p>
+    <h3><span style="background-color:orange">Divine</span></h3>
+    <p>
+        Divine is a descriptor I came up with to describe someone whos
+        ancestry can be entirely traced back to gods. Many heros fall into this catagory.
+    </p>
+    <h3><span style="background-color:red">Mortal</span></h3>
+    <p>
+        Not everyone's a god, so there are mortals. When both parents were mortals,
+        I didn't include the parents.
+    </p>
+    <h3><span style="background-color:darkred">Daemon</span></h3>
+    <p>
+        Daemons are lesser dieties or spirits. Most of the important ones
+        are children of Styx (not the river) and Pallas, including Nike.
+    </p>
+    <h3><span style="background-color:black; color:white">Chaos</span></h3>
+    <p>
+        Chaos is a god/place/concept from which the first primordial gods
+        came from. It gets its own catagory.
+    </p>
+    <h3><span style="background-color:gainsboro">Old</span></h3>
+    <p>
+        Old refers to the two gods that predate Chaos. The beginning of
+        the universe is described as Ananke, the goddess of
+        inevitability, crushing Chronos (not Cronus), the god of time.
+    </p>
+
+    <h2>Strange Connections</h2>
+    <p>
+        Not all gods are born in a normal way, ones that are particularly
+        different are listed here.
+    </p>
+    <p>
+        (— – —): Aphrodite appears in the foam produced from Uranus'
+        severed genitals crashing into the ocean.
+    </p>
+    <p>
+        (— – – —): Athena, fully grown and armored, bursts from Zeus'
+        forehead
+    </p>
+    <p>
+        (— – – – —): Hephaestus creates Pandora, the first mortal woman,
+        from earth, and Athena clothes her
+        (this is very important for some reason).
+    </p>
+    <h2>Things I Found Interesting</h2>
+
+    <p>Zeus is the father, grandfather, and second cousin of Hellen of Troy.</p>
+</div>
 <div id="mynetwork"></div>
 
 <script type="text/javascript">
@@ -74,7 +170,7 @@
         {id: 45, label: 'Thetis', color:nymph},
         {id: 46, label: 'Chiron', color:myth},
         {id: 47, label: 'Chariclo', color:nymph},
-        {id: 48, label: 'Ende�s', color:mortal},
+        {id: 48, label: 'Endeïs', color:mortal},
         {id: 49, label: 'Peleus', color:mortal},
         {id: 50, label: 'Achilles', color:hero},
         {id: 51, label: 'Asopus', color:rivergod},
@@ -95,7 +191,7 @@
         {id: 66, label: 'Minos', color:mortal},
         {id: 67, label: 'Helios', color:titan},
         {id: 68, label: 'Perse', color:nymph},
-        {id: 69, label: 'Pasipha�', color:mortal},
+        {id: 69, label: 'Pasiphaë', color:mortal},
         {id: 70, label: 'Catreus', color:mortal},
         {id: 71, label: 'Aerope', color:mortal},
         {id: 72, label: 'Agamemnon', color:mortal},
@@ -126,7 +222,7 @@
         {id: 97, label: 'Amphithea', color:mortal},
         {id: 98, label: 'Anticlea', color:mortal},
         {id: 99, label: 'Odysseus', color:hero},
-        {id:100, label: 'Dana�', color:mortal},
+        {id:100, label: 'Danaë', color:mortal},
         {id:101, label: 'Perseus', color:hero},
         {id:102, label: 'Andromeda', color:mortal},
         {id:103, label: 'Gorgophone', color:mortal},
