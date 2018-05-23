@@ -3,18 +3,21 @@
     <title>Greek Mythology Family Tree</title>
     <script type="text/javascript" src="vis.min.js"></script>
     <link href="vis.min.css" rel="stylesheet" type="text/css" />
+    <link href="https://fonts.googleapis.com/css?family=Sunflower:300" rel="stylesheet">
     <style type="text/css">
         body {
             display: inline;
         }
         #mynetwork {
-            border: 1px solid lightgray;
             float: right;
             width: 79.8%;
             /* flex-grow: 1; */
             height: 99.5%;
         }
         #left {
+            font-family: 'Sunflower', sans-serif;
+            margin-left: 8px;
+            margin-right: 8px;
             width: 20%;
             height: 100%;
             overflow-y: auto;
@@ -26,6 +29,7 @@
 <div id="left">
     <h1>Greek Mythology Family "Tree"</h1>
     <a href="https://github.com/randomtestfive/GreekMythologyTree">Source Code</a>
+    <p id="stats">... Nodes, ... Connections</p>
     <h2>Connections</h2>
     <p>
         An arrow points from parent to child.
@@ -36,9 +40,9 @@
     <h3><span style="background-color:yellow">God</span></h3>
     <p>Just normal gods.</p>
     <h3><span style="background-color:gold">Olympian</span></h3>
-    <p>These are the 12 Gods considered to be Olympians, such as Zeus</p>
-    <h3><span style="background-color:green">Titan</span></h3>
-    <p>The Titans were the pantheon before the Olympians, such as Cronus, Father of Zeus</p>
+    <p>These are the 12 Gods considered to be Olympians, such as Zeus.</p>
+    <h3><span style="background-color:lime">Titan</span></h3>
+    <p>The Titans were the pantheon before the Olympians, such as Cronus, Father of Zeus.</p>
     <h3><span style="background-color:cyan">Primordial</span></h3>
     <p>
         The Primordial gods existed before the Titans,
@@ -64,7 +68,9 @@
     <h3><span style="background-color:orange">Divine</span></h3>
     <p>
         Divine is a descriptor I came up with to describe someone whos
-        ancestry can be entirely traced back to gods. Many heros fall into this catagory.
+        ancestry can be entirely traced back to gods. If a character is
+        traditionally described as divine, they're here too.
+        Many heros fall into this catagory.
     </p>
     <h3><span style="background-color:red">Mortal</span></h3>
     <p>
@@ -75,6 +81,10 @@
     <p>
         Daemons are lesser dieties or spirits. Most of the important ones
         are children of Styx (not the river) and Pallas, including Nike.
+    </p>
+    <h3><span style="background-color:purple; color:white">Mythical</span></h3>
+    <p>
+        Refers to other miscellaneous mythical creatures, such as centaurs or minotaurs.
     </p>
     <h3><span style="background-color:black; color:white">Chaos</span></h3>
     <p>
@@ -106,9 +116,22 @@
         from earth, and Athena clothes her
         (this is very important for some reason).
     </p>
-    <h2>Things I Found Interesting</h2>
+    <h2>Not Included</h2>
+    <ul>
+        <li>The Muses (there's 9 of them and they're all the same)</li>
+        <li>All male humans (created by Prometheus from clay)</li>
+        <li>Hercules' children (there are a surprising number)</li>
+        <li>The remaining 2994 daughters of Oceanus and Tethys</li>
+    </ul>
 
+    <h2>Things I Found Interesting</h2>
     <p>Zeus is the father, grandfather, and second cousin of Hellen of Troy.</p>
+    <p>Achilles is 5/8 Water Nymph, 1/8 Zeus, and 1/8 Centaur</p>
+    <p>
+        Cyrene is the best character in Greek mythology. She's a mortal
+        whose hunting prowess was compared to Artimis, who wrestled a bear,
+        then had a child with Apollo who went on to invent beekeeping.
+    </p>
 </div>
 
 
@@ -565,6 +588,9 @@
         {from: 54, to:117, dashes:[10,3,3,3,3,3,3,3], arrows:'to'},
         {from:116, to:117, dashes:[10,3,3,3,3,3,3,3], arrows:'to'}
     ]);
+
+    var stats = document.getElementById('stats');
+    stats.innerHTML = ''+nodes.length+' Nodes, '+edges.length+' Connections';
 
     // create a network
     var container = document.getElementById('mynetwork');
