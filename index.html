@@ -89,7 +89,8 @@
     </p>
     <h3><span style="background-color:purple; color:white">Mythical</span></h3>
     <p>
-        Refers to other miscellaneous mythical creatures, such as centaurs or minotaurs.
+        Refers to other miscellaneous mythical creatures, such as
+        centaurs, cyclops, or minotaurs.
     </p>
     <h3><span style="background-color:black; color:white">Chaos</span></h3>
     <p>
@@ -140,6 +141,10 @@
     </p>
     <p>
         Achilles is Agamemnon's second cousin once removed.
+    </p>
+    <p>
+        Homer claimed to be the child of Menes, a river god, and Critheïs, a
+        water nymph. (Critheïs had a mortal father and her mother is unknown.)
     </p>
 </div>
 <div style="background:black; height:100%; width:5px"></div>
@@ -323,7 +328,11 @@
         {id:161, label: 'Deipyle', color:mortal},
         {id:162, label: 'Tydeus', color:mortal},
         {id:163, label: 'Diomedes', color:hero},
-        {id:164, label: 'Aristaeus', color:divine}
+        {id:164, label: 'Aristaeus', color:divine},
+        {id:165, label: 'Menes', color:rivergod},
+        {id:166, label: 'Melanopus', color:mortal},
+        {id:167, label: 'Critheïs', color:nymph},
+        {id:168, label: 'Homer', color:mortal}
     ]);
 
     // create an array with edges
@@ -542,6 +551,11 @@
         {from:162, to:163, arrows:'to'},
         {from:  8, to:164, arrows:'to'},
         {from:150, to:164, arrows:'to'},
+        {from: 19, to:165, arrows:'to'},
+        {from: 17, to:165, arrows:'to'},
+        {from:166, to:167, arrows:'to'},
+        {from:165, to:168, arrows:'to'},
+        {from:167, to:168, arrows:'to'},
 
         //gaia children
         {from: 10, to: 42, arrows:'to'},
